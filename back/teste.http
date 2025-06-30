@@ -1,0 +1,108 @@
+### Login simulado
+POST http://localhost:8080/login
+Content-Type: application/json
+
+###
+
+### Criar Estabelecimento
+POST http://localhost:8080/estabelecimentos
+Content-Type: application/json
+
+{
+  "numero_estabelecimento": "001",
+  "nome": "Estabelecimento XPTO",
+  "razao_social": "XPTO Ltda",
+  "endereco": "Rua A, 123",
+  "cidade": "São Paulo",
+  "estado": "SP",
+  "cep": "01000-000",
+  "numero": "123"
+}
+
+###
+
+### Listar Estabelecimentos
+GET http://localhost:8080/estabelecimentos
+
+###
+
+### Buscar Estabelecimento por ID
+GET http://localhost:8080/estabelecimentos/2
+
+###
+
+### Editar Estabelecimento
+PUT http://localhost:8080/estabelecimentos/1
+Content-Type: application/json
+
+{
+  "numero_estabelecimento": "001",
+  "nome": "Estabelecimento Atualizado",
+  "razao_social": "XPTO S/A",
+  "endereco": "Rua Atualizada, 456",
+  "cidade": "Campinas",
+  "estado": "SP",
+  "cep": "13000-000",
+  "numero": "456"
+}
+
+###
+
+### Remover Estabelecimento
+DELETE http://localhost:8080/estabelecimentos/2
+
+###
+
+### Criar Loja
+POST http://localhost:8080/lojas
+Content-Type: application/json
+
+{
+  "numero_loja": "L002",
+  "nome": "Loja Central",
+  "razao_social": "Loja XPTO",
+  "endereco": "Av. Brasil, 456",
+  "cidade": "São Paulo",
+  "estado": "SP",
+  "cep": "01001-000",
+  "numero": "456",
+  "estabelecimento_id": 2
+}
+
+###
+
+### Listar Lojas
+GET http://localhost:8080/lojas
+
+###
+
+### Buscar Loja com Estabelecimento por ID
+GET http://localhost:8080/lojas/5
+
+###
+
+### Listar Lojas de um Estabelecimento
+GET http://localhost:8080/estabelecimentos/2/lojas
+
+###
+
+### Editar Loja
+PUT http://localhost:8080/lojas/1
+Content-Type: application/json
+
+{
+  "numero_loja": "L001-Editada",
+  "nome": "Loja Central Atualizada",
+  "razao_social": "Loja XPTO Modificada",
+  "endereco": "Rua Nova, 789",
+  "cidade": "Rio de Janeiro",
+  "estado": "RJ",
+  "cep": "20000-000",
+  "numero": "789",
+  "estabelecimento_id": 1
+}
+
+###
+
+### Remover Loja
+DELETE http://localhost:8080/lojas/3
