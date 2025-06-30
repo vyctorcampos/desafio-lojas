@@ -10,6 +10,8 @@ Sistema gerenciador de lojas e estabelecimentos.
 * Docker
 * Git
 * Docker Compose
+* VS Code
+* Rest Cliente extension vs code
 
 ## -------------------------------URL------------------------
 **Frontend:** [http://localhost:3000](http://localhost:3000)  
